@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+
+  <title>Candidate Exercise</title>
+</head>
+
+<body>
+  <div class="exercise-header">
+    <h2>Exercise 1 - Testimonial Block</h2>
+  </div>
+
+  <div class="container">
+    <div class="testimonial">
+      <div class="testimonial__content">
+        <p class="testimonial__quote">Gingerbread tart cupcake cake muffin cookie liquorice tiramisu. Toffee cupcake cake cake croissant icing carrot cake cookie. Dessert chocolate bar apple pie sesame snaps liquorice carrot cake cookie danish.</p>
+        <span class="testimonial__author">Indiana Jones, Archaeologist</span>
+      </div>
+      <a class="button testimonial__cta">Tell Me More</a>
+    </div>
+  </div>
+
+  <div class="exercise-header">
+    <h2>Exercise 2 - Filterable Content</h2>
+  </div>
+
+  <div class="container">
+    <div class="filterable-content">
+      <div class="media-controls">
+        <div class="media-controls__options media-controls__options--dropdown-filters">
+          <div class="dropdown-filter dropdown-filter--genre">
+            <div class="dropdown-filter__display-box">Genre</div>
+            <div class="dropdown-filter__dropdown" id="js-genreDropdown"></div>
+          </div>
+          <div class="dropdown-filter dropdown-filter--year">
+            <div class="dropdown-filter__display-box">Year</div>
+            <div class="dropdown-filter__dropdown" id="js-yearDropdown"></div>
+          </div>
+        </div>
+        <div class="media-controls__options media-controls__options--search">
+          <input type="text" id="js-search" class="searchbar" />
+        </div>
+        <div class="media-controls__options media-controls__options--radio-filters">
+          <form id="js-filterType">
+            <input type="radio" id="movie" value="movie" name="media-type" class="js-mediaTypeFilter" />
+            <label for="movie">Movie</label>
+            <input type="radio" id="book" value="book" name="media-type" class="js-mediaTypeFilter" />
+            <label for="book">Book</label>
+          </form>
+        </div>
+        <div class="media-controls__options media-controls__options--clear">
+          <a href="" id="js-clearFilters">Clear Filters</a>
+        </div>
+      </div>
+      <div class="media-list" id="js-mediaList"></div>
+    </div>
+  </div>
+
+</body>
+
+<footer>
+  <script type="module" src="../js/index.js"></script>
+</footer>
+</html>

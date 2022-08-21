@@ -1,0 +1,193 @@
+// .filterable-content {
+//     border: 1px solid $gray-dark;
+//     padding: 2rem 1rem;
+// }
+
+.media-controls {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid $gray-dark;
+    padding: 2rem 1rem;
+
+    &__options {
+        width: 100%;
+
+        @media only screen and (min-width: $lg) {
+            width: 50%;
+        }
+
+        &--dropdown-filters,
+        &--search {
+            margin: 0 0 2rem 0;
+        }
+
+        &--search,
+        &--clear {
+            @media only screen and (min-width: $lg) {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+
+        &--radio-filters {
+            margin: 0 0 2rem 0;
+
+            @media only screen and (min-width: $lg) {
+                margin: 0;
+            }
+        }
+
+        &--clear {
+            a {
+                text-transform: uppercase;
+            }
+        }
+
+        &--dropdown-filters {
+            display: flex;
+            justify-content: space-between;
+
+            @media only screen and (min-width: $lg) {
+                display: block;
+            }
+
+            .dropdown-filter {
+                width: calc(50% - 1rem);
+
+                @media only screen and (min-width: $lg) {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+.searchbar {
+    background-color: $gray-light;
+    border: 2px solid $gray-dark;
+    padding: .5rem;
+}
+
+.dropdown-filter {
+    display: inline-flex;
+    position: relative;
+
+    &:hover {
+        .dropdown-filter__dropdown {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &--genre {
+        @media only screen and (min-width: $lg) {
+            margin: 0 1rem 0 0;
+        }
+    }
+
+    &__display-box {
+        background-color: $gray;
+        color: $gray-darkest;
+        padding: .5rem 2.5rem .5rem .5rem;
+        border-bottom: 4px solid $gray-dark;
+        width: 100%;
+
+        @media only screen and (min-width: $lg) {
+            width: 125px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $gray-light;
+        width: calc(100% - 4px);
+        border: 2px solid $gray-dark;
+        z-index: 1;
+        visibility: Hidden;
+        opacity: 0;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $gray-darkest;
+
+        input {
+            margin: 0 1rem 0 0;
+        }
+
+        &:hover {
+            visibility: visible;
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+    &__option {
+        padding: .75rem 1rem;
+        border-bottom: 1px solid $gray-dark;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            background-color: $gray-dark;
+        }
+    }
+}
+
+.media-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 2rem 1rem 0 1rem;
+    border: 1px solid $gray-dark;
+    border-top: 0;
+    margin: 0 0 2rem 0;
+}
+
+.media-item {
+    width: 100%;
+    text-decoration: none;
+    color: $gray-darkest;
+    margin: 0 0 2rem 0;
+
+    @media only screen and (min-width: $sm) {
+        width: calc(50% - (2rem / 2));
+        margin: 0 2rem 2rem 0;
+
+        &:nth-child(2n+2) {
+            margin: 0 0 2rem 0;
+        }
+    }
+
+    @media only screen and (min-width: $lg) {
+        width: calc(33.33% - (4rem / 3));
+
+        &:nth-child(2n+2) {
+            margin: 0 2rem 2rem 0;
+        }
+
+        &:nth-child(3n+3) {
+            margin: 0 0 2rem 0;
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+    }
+
+    &__genre {
+        font-size: 14px;
+        margin: 0 0 1rem 0;
+    }
+
+    &__img {
+        width: 100%;
+        margin: 0;
+    }
+}

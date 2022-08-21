@@ -1,0 +1,29 @@
+html {
+    height: 100vw;
+    background-color: $gray-light;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+
+    @media only screen and (min-width: $sm) {
+        max-width: 540px;
+    }
+
+    @media only screen and (min-width: $md) {
+        max-width: 720px;
+    }
+
+    @media only screen and (min-width: $lg) {
+        max-width: 960px;
+    }
+
+    @media only screen and (min-width: $xl) {
+        max-width: 1140px;
+    }
+
+    @media only screen and (min-width: $xxl) {
+        max-width: 1320px;
+    }
+}

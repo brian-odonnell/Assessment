@@ -1,0 +1,27 @@
+.cambria {
+    font-family: 'Cambria', serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.times {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text-dark-gray {
+    color: $gray-darkest;
+}
+
+a {
+    color: $blue;
+
+    &:hover {
+        color: $blue-dark;
+    }
+}
